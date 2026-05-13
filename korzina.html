@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина — BookNest</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="korzina.css">
+</head>
+<body>
+
+    
+  <header class="navbar">
+        <div class="container">
+            <div class="logo-wrapper">
+                <span class="material-icons">menu_book</span>
+                <span class="brand-text">BookNest</span>
+            </div>
+            
+            <nav class="desktop-menu">
+                <a href="index.html">О нас</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="#">Контакты</a>
+            </nav>
+
+            <div class="nav-icons">
+                <span class="material-icons">search</span>
+                <div class="bookmark">
+                    <span class="material-icons">bookmark_border</span>
+                </div>
+                <a href="lichi.html" class="material-icons">account_circle</a>
+                <a  href="korzina.html" class="material-icons shopping-btn">shopping_bag</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="cart-page container">
+        <h1 class="page-title">Корзина</h1>
+
+        <div class="cart-layout">
+            <!-- Список товаров -->
+            <section class="cart-items">
+                
+                
+                <div class="cart-card">
+                    <img src="https://imo10.labirint.ru/books/828946/cover.jpg/484-0" alt="История моды" class="item-img">
+                    <div class="item-details">
+                        <h2 class="item-title">История моды. С 1850-х годов до наших дней</h2>
+                        <p class="item-author">Коул Д.Д., Дейл Н.</p>
+                        <div class="quantity-controls">
+                            <button class="qty-btn">−</button>
+                            <span class="qty-val">1 шт</span>
+                            <button class="qty-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="item-price">8 270 руб.</div>
+                </div>
+
+              
+                <div class="cart-card">
+                    <img src="https://cdn.litres.ru/pub/c/cover/51254384.jpg" alt="Опасная работа" class="item-img">
+                    <div class="item-details">
+                        <h2 class="item-title">Опасная работа</h2>
+                        <p class="item-author">Дойл А.К.</p>
+                        <div class="quantity-controls">
+                            <button class="qty-btn">−</button>
+                            <span class="qty-val">2 шт</span>
+                            <button class="qty-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="item-price">1 702 руб.</div>
+                </div>
+
+                
+                <div class="cart-card">
+                    <img src="https://albuscorvus.ru/wp-content/uploads/2025/07/myko_ac-site-cower-692x949.png" alt="Мико" class="item-img">
+                    <div class="item-details">
+                        <h2 class="item-title">Мико. Полный путеводитель по миру грибов</h2>
+                        <p class="item-author">Дворжак И.</p>
+                        <div class="quantity-controls">
+                            <button class="qty-btn">−</button>
+                            <span class="qty-val">1 шт</span>
+                            <button class="qty-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="item-price">2 150 руб.</div>
+                </div>
+
+            </section>
+            
+            <aside class="cart-summary">
+                <div class="summary-box">
+                    <div class="summary-row">
+                        <span>Сумма заказа</span>
+                        <span>13 824 руб.</span>
+                    </div>
+                    <div
+[05.05.2026 23:49] иря: class="summary-row expandable">
+                        <span>Промокод</span>
+                        <span class="material-icons">add</span>
+                    </div>
+                    <div class="summary-row expandable">
+                        <span>Скидочная карта</span>
+                        <span class="material-icons">add</span>
+                    </div>
+                    <hr class="divider">
+                    <div class="summary-total">
+                        <div class="total-info">
+                            <span class="total-label">Итог</span>
+                            <span class="total-count">4 товара</span>
+                        </div>
+                        <span class="total-price">13 824 руб.</span>
+                    </div>
+                    <button class="checkout-btn">
+                        Оформить заказ
+                        <span class="material-icons">trending_flat</span>
+                    </button>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="lichi.html">Регистрация</a>
+                <a href="#">Помощь</a>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+            <p class="copyright">© 2026 BookNest. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

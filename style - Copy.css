@@ -1,0 +1,588 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background: linear-gradient(to bottom, #ddc1ae, #b8977e, #543b2b);
+    background-attachment: fixed;
+    color: #2b1d14;
+    min-height: 100vh;
+}
+
+
+.container {
+    max-width: 75rem; /* 1200px */
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+
+.navbar {
+    background: #e5d1c0;
+    padding: 1.25rem 0; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0.125rem 0.625rem rgba(0,0,0,0.1); 
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem; 
+    font-size: 1.5rem; 
+    font-weight: 600;
+}
+
+.desktop-menu a {
+    text-decoration: none;
+    color: #2b1d14;
+    margin: 0 1.25rem; 
+    font-size: 1.125rem; 
+    transition: 0.3s;
+}
+
+.desktop-menu a:hover {
+    color: #8d6e63;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.25rem; 
+    align-items: center;
+    cursor: pointer;
+}
+
+.bookmark {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -0.625rem; 
+    right: -0.3125rem; 
+    font-size: 0.75rem; 
+    font-weight: bold;
+}
+
+/* Страница товара */
+.product-page {
+    padding: 2.5rem 0 5rem;
+}
+
+.breadcrumbs {
+    font-size: 0.9375rem;
+    opacity: 0.8;
+    margin-bottom: 3rem;
+}
+
+.product-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Левая колонка для фото, правая чуть шире для текста */
+    gap: 5rem;
+    align-items: start;
+}
+
+/* Галерея */
+.main-image-box {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.main-img {
+    width: 100%;
+    max-width: 25rem;
+    height: auto;
+    box-shadow: 0 1.25rem 3.75rem rgba(0,0,0,0.4);
+    border-radius: 0.125rem;
+}
+
+.preview-thumbs {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.thumb {
+    width: 4rem;
+    height: 5rem;
+    background: rgba(255,255,255,0.2);
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.thumb.active {
+    border: 2px solid #fff;
+}
+
+/* Информация */
+.info-header {
+    margin-bottom: 2.5rem;
+}
+
+.book-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.book-author {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.rating-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stars {
+    color: #ffd700;
+    display: flex;
+}
+
+.reviews-count {
+    font-size: 0.875rem;
+    opacity: 0.7;
+}
+
+/* Карточка покупки */
+.purchase-card {
+    background: rgba(208, 181, 161, 0.4);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.price-section {
+    display: flex;
+  justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.current-price {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.stock-status {
+    background: rgba(255,255,255,0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.add-to-cart-btn {
+    flex-grow: 1;
+    background: #4a3427;
+    color: #fff;
+    border: none;
+    padding: 1.25rem;
+    font-family: 'Lora', serif;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background: #2b1d14;
+}
+
+.wishlist-btn {
+    width: 4rem;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+/* Детализация */
+.book-description {
+    margin-bottom: 2.5rem;
+}
+
+.book-description h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    display: inline-block;
+}
+
+.book-description p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.book-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.5rem;
+}
+
+.spec-row span:first-child {
+    opacity: 0.6;
+}
+
+/* Плавающая стрелка */
+.floating-back {
+    position: fixed;
+    left: 2rem;
+    bottom: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: rgba(255,255,255,0.15);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+    .small-img {
+        width: 100%;
+        height: 100%;
+    }
+/* Подвал */
+.footer {
+    background: #2b1d14;
+    color: #c9b09c;
+    padding: 2.5rem 0; 
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 1.25rem; 
+}
+
+.footer-links a {
+    color: #c9b09c;
+    text-decoration: none;
+    margin: 0 0.9375rem; 
+    font-size: 0.875rem; 
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem; 
+}
+
+.copyright {
+    font-size: 0.75rem; 
+    opacity: 0.6;
+}
+
+.swiper {
+    height:220px;
+}
+
+.swiper-slide {
+    width: 300px;
+    height:200px;
+    background-color: #c9b09c;
+}
+.inner {
+    display:flex;
+    flex-direction: row;
+    padding:10px;
+    align-items:stretch;
+    justify-content: space-between;
+    height:200px;
+}
+
+.swiper-slide .book {
+    background-color:lightgray;
+    border-radius: 7px;
+    width:120px;
+}
+    
+
+
+        body {
+            background-color: #1a110a; 
+           
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Lora', serif }
+
+         
+        .app-container {
+            width: 360px;
+            height: 640px;
+            background: linear-gradient(to bottom, #e2cbb8 0%, #b28e70 35%, #5d4231 100%);
+            border: 8px solid #332218;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column; }
+        
+
+        
+        .header-icons {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            color: #4a3427;
+        }
+
+        .header-left, .header-right {
+            display: flex;
+            gap: 15px;
+        }
+
+        .bookmark-container {
+            position: relative;
+        }
+
+        .badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: none;
+            color: #4a3427;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        
+        .logo-section {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+        }
+
+        .book-icon {
+            font-size: 80px !important;
+            color: #4a3427;
+            display: block;
+            margin-bottom: -10px;
+        }
+
+        .brand-name {
+            font-size: 42px;
+            color: #332218;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+        }
+
+
+ 
+        .description-tag {
+            background-color: rgba(74, 52, 39, 0.4);
+            color: #fff;
+            text-align: center;
+            padding: 30px 10px;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+
+      
+        .menu-container {
+            padding: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        .menu-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            padding: 15px;
+            color: #fff;
+            font-size: 20px;
+            font-family: 'Lora', serif;
+            border-radius: 5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .menu-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+     
+        .footer {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .footer-icon {
+            position: absolute;
+            left: 20px;
+            bottom: 15px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .reg-link {
+            color: #d7c4b5;
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+
+
+h1 { color:rgb(255, 255, 255);
+        font-family: "Lora", cursive;
+        font-weight: 400;
+        font-style: normal;
+}
+h2 { color:rgb(255, 255, 255);
+    font-family: "Lora", cursive;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.framed { 
+    border: 1px solid yellowgreen;
+    padding:10px;
+    display:inline-block;
+}
+
+u1 { list-style:lower-greek;}
+u1 li { color:#2b1d14}
+
+.c1 li { color:rgb(97, 59, 2)}
+
+td { padding: 10px; border-bottom:2px dashed green}
+
+button {color: darkred;
+    font-family: "Lora", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+input { color:darkred;
+    font-family: "Lora", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hor {
+    display:flex;
+width:100%;
+    flex-direction: row;
+    gap:10px;
+    align-items: center;
+    margin-bottom:2rem;
+    margin-top:2rem;
+}
+
+.hor div { width:32%; height:250px;}
+
+.hor div img { width:100%; height:100%; object-fit:cover; }
+
+.ver {
+    display:flex;
+    width:30%;
+    flex-direction: column-reverse;
+    gap:10px;
+    align-items: flex-end;
+    margin-bottom:2rem;
+}
+
+.grid {
+    display:grid;
+    grid-template-rows: auto auto ;
+    grid-template-columns: auto auto auto;
+    gap:10px;
+    width:30rem;
+}
+
+.grid img { width:100%; height:100%; object-fit:cover}
+
+.grid div { border:3px solid black;}
+
+.c1 {
+ grid-row-start:1;
+ grid-row-end:3;
+}
+
+.c2 {
+    grid-column-start:2;
+    grid-column-end:4;
+   }
+html { padding:0; margin:0}
+  
+   .wrap {
+    padding:10px;
+   }
+
+   .top {
+    display:flex;
+    flex-direction:row;
+    background-color:beige;
+    width:100%;
+    padding:20px;
+   }
+
+   .top a { color:black;}
+
+   .my-button {
+    background-color:#332218;
+    color:#fff;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    font-size:1rem;
+    padding:0.5rem;
+    display: inline-block;
+     font-family: "Lora", cursive;
+    
+   }
+
+   .my-button:hover {
+      color:#552d2d;
+   } 
+
+   .book-title { color:#2b1d14}
