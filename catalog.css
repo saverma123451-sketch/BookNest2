@@ -4,9 +4,8 @@ html {
 
 body {
     font-family: 'Lora', serif;
-    background: linear-gradient(to bottom, #ddc1ae, #b8977e, #543b2b);
+    color: #fff;
     background-attachment: fixed;
-    color: #2b1d14;
     min-height: 100vh;
 }
 
